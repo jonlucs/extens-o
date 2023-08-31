@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr, th , td , table{
+        border: 1px rgb(12, 61, 12) solid;
+        }
+        table{
+            width: 100%;
+            margin-bottom:30px;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>M16</li>
+    <li>PARA FAL</li>
+    <li>MP5</li><!--usada em operaçoes aquaticas-->
+</ul>
+
+<ol>
+    <li>CARABINA.357MAG</li>
+    <li>ESPINGARDA BOITO MIURA CAL.20</li>
+    <li>GLOCK G27</li>
+</ol>
+<table>
+    <tr>
+    <th>ARMA</th>
+    <th colspan="2">CALIBRE</th>
+    
+    </tr>
+    <tr>
+        <td>glock</td>
+        <td>9mm</td>
+        <td>G27</td>
+    </tr><!--arma alemã-->
+    <tr>
+        <td>FAL</td>
+        <td>76.2</td>
+        <td>FUZIL</td>
+    </tr>
+        
+</table>
+<table>
+    <tr>
+    <th>ARMA</th>
+    <th>CALIBRE</th>
+    <th>MODELO</th>
+    </tr>
+    <tr>
+        <td>CTT</td>
+        <td>40</td>
+        <td>FUZIL LEVE</td>
+    </tr><!--ctt mais usada em operaçoes em favelas-->
+    <td>SCAR</td>
+    <td>55.6</td>
+    <td>FUZIL</td>
+</table>
+<table>
+    <tr><!--para fal (fuzil automatico leve)-->
+        <th>NOME:</th>
+        <th>PREÇO</th>
+    </tr>
+    <tr>
+        <td>GLOCK</td>
+        <td>R$15.000,00</td>
+    </tr>
+    <tr><!--preço no brasil-->
+        <td>PARA FAL</td>
+        <td>R$18.000,00</td>
+
+    </tr>
+
+
+</table>
+<form>
+    <fieldset>
+        <legend> DADOS PESSOAIS</legend>
+    Nome:<br>
+    <input type="text" name="nome"><br>
+    
+    sobrenome:<br>
+    <input type="text" name="sobrenome"><br><br>
+
+    <input type="submit" value="enviar">
+    <input type="reset" value="limpar">
+    </fieldset>
+</form>
+
+    <form>
+        <fieldset>
+            <legend>ESTADO CIVIL</legend>
+        <input type="radio" name="estadocivil" value="casado"> casado<br>
+        <input type="radio" name="estadocivil" value="solteiro"> solteiro<br>
+        <input type="radio" name="estadocivil" value="outros"> outros
+        </fieldset>
+    </form>
+
+    <form action="enviar.py">
+        <fieldset>
+             <legend>DADOS DO ARMAMENTO:</legend>
+
+             Arma:<br>
+             <input type="text" name="Arma"><br>
+
+             Calibre:<br>
+             <input type="text" name="Calibre"><br><br>
+        
+             <input type="submit" value="enviar">
+        </fieldset>
+    </form>
+
+    <form action="enviar.py">
+        <fieldset>
+            <legend>MARCA:</legend>
+        <select name="Armas">
+            <option value="TAUROS">TAUROS</option>
+            <option value="SIG SAUER" selected>SIG SAUER</option>
+            <option value="GLOCK">GLOCK</option>
+            <option value="COLT">COLT</option>
+        </select><br><br>
+
+        <input type="submit" value="enviar">
+        </fieldset>
+
+    </form>
+     
+    <form action="enviar.py">
+        <fieldset>
+        QUAL CALIBRE VOCÊ PRO?<br><br>
+        <input type="checkbox" name="estilo" value=".40"> .40<br>
+        <input type="checkbox" name="estilo" value=".9MM"> .9MM<br>
+        <input type="checkbox" name="estilo" value=".50"> .50<br>
+        <input type="checkbox" name="estilo" value=".22"> .22<br>
+        </fieldset>
+    </form>
+
+    <form action="enviar.py">
+        <textarea name="sugestao" rows="10" cols="30">Digite sobre o calibre do armamento aqui.</textarea><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <input type="datetime-local">
+
+    </form>
+     
+
+
+</body>
+
+</html>
