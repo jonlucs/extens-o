@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula For/Loop</title>
+</head>
+<body>
+
+    <p id="switch"></p>
+    <p id="materia"></p>
+    <p id="tabuada"></p>
+    <p id="meuCarro"></p>
+
+    <script>
+        var mensagemDeBoasVindas = "";
+        var sexualidade = prompt("Digite M para masculino ou F para feminino:")
+
+        switch(sexualidade){
+            case "m":
+                mensagemDeBoasVindas = "Seja bem-vindo!";
+                break;
+            case "f":
+                mensagemDeBoasVindas = "Seja bem-vinda!";
+                break;
+        }
+        document.getElementById("switch").innerHTML = mensagemDeBoasVindas;
+
+        var materias = ["Fundamentos de programação para Internet", "Arquitetura e organização de computadores", "Extensão PACEX", "Legislação aplicada a tecnologia da Informação"];
+
+        var listaMaterias = document.createElement('ul');
+
+        for (var i = 0; i < materias.length; i++) {
+            var materia = document.createElement('li');
+            materia.textContent = materias[i];
+            listaMaterias.appendChild(materia);
+        }
+        document.body.appendChild(listaMaterias);
+
+        var text = "";
+        var i = 0;
+        while (i < 5) {
+            text += "<br>A matéria escolhida é " + materias[i];
+            i++;
+        }
+        document.getElementById("materia").innerHTML = text;
+
+        var numeros = ["8", "16", "24", "32", "40", "48", "56", "64", "72", "80"];
+        var text = "";
+        for (var i = 0; i < numeros.length; i++) {
+            text += numeros[i] + "<br>";
+        }
+        document.getElementById("tabuada").innerHTML = text;
+
+        var txt = "";
+        var carro = {nome:"sklyne r34", marca:"skyline", ano:2023, motor:"8.0 W16", cor:"azul"};
+        
+        for (var atributo in carro) {
+            txt += carro[atributo] + ", ";
+        }
+        document.getElementById("meuCarro").innerHTML = txt;
+    </script>
+</body>
+</html>
